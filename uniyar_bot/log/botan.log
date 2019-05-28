@@ -1,0 +1,1029 @@
+2019-05-28 11:54:37,909,909 INF botan.main.main(18) run botan 
+2019-05-28 11:54:37,921,921 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 11:55:53,426,426 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-28 11:55:53,429,429 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 11:55:56,944,944 INF botan.main.main(18) run botan 
+2019-05-28 11:55:56,947,947 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 11:57:12,240,240 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-28 11:57:12,241,241 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 11:57:15,622,622 INF botan.main.main(18) run botan 
+2019-05-28 11:57:15,625,625 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 11:58:30,918,918 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-28 11:58:30,920,920 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 11:58:34,800,800 INF botan.main.main(18) run botan 
+2019-05-28 11:58:34,801,801 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 11:59:50,108,108 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-28 11:59:50,110,110 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 11:59:53,235,235 INF botan.main.main(18) run botan 
+2019-05-28 11:59:53,237,237 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:01:08,458,458 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-28 12:01:08,459,459 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 12:01:11,739,739 INF botan.main.main(18) run botan 
+2019-05-28 12:01:11,741,741 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:02:26,974,974 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-28 12:02:26,975,975 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 12:02:30,094,094 INF botan.main.main(18) run botan 
+2019-05-28 12:02:30,095,095 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:03:45,315,315 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-28 12:03:45,317,317 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 12:03:48,536,536 INF botan.main.main(18) run botan 
+2019-05-28 12:03:48,537,537 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:05:03,782,782 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-28 12:05:03,785,785 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 12:05:07,416,416 INF botan.main.main(18) run botan 
+2019-05-28 12:05:07,418,418 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:06:23,013,013 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-28 12:06:23,017,017 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 12:06:26,454,454 INF botan.main.main(18) run botan 
+2019-05-28 12:06:26,455,455 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:06:27,908,908 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-28 12:09:02,589,589 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 44, in everything
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-28 12:09:06,481,481 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-28 12:12:29,073,073 INF botan.main.main(18) run botan 
+2019-05-28 12:12:29,076,076 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:12:30,561,561 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-28 12:15:51,870,870 INF botan.main.main(18) run botan 
+2019-05-28 12:15:51,873,873 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:15:53,327,327 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-28 12:16:15,886,886 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:16:16,393,393 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-28 12:16:16,403,403 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:16:16,900,900 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 44 
+2019-05-28 12:16:33,190,190 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:16:33,757,757 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-28 12:16:33,773,773 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:16:34,229,229 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 50 
+2019-05-28 12:16:36,533,533 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:16:37,026,026 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 40 
+2019-05-28 12:16:37,039,039 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:16:37,559,559 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 90 
+2019-05-28 12:16:41,938,938 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:16:42,468,468 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 43 
+2019-05-28 12:16:46,396,396 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:16:46,878,878 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-28 12:16:56,894,894 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:16:57,364,364 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-28 12:17:21,211,211 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:17:21,746,746 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 81 
+2019-05-28 12:17:21,774,774 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:17:22,245,245 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 70 
+2019-05-28 12:24:41,940,940 INF botan.main.main(18) run botan 
+2019-05-28 12:24:41,942,942 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:24:43,360,360 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-28 12:25:03,410,410 INF botan.main.main(18) run botan 
+2019-05-28 12:25:03,413,413 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:25:06,060,060 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-28 12:25:16,219,219 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:25:16,862,862 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-28 12:28:24,637,637 INF botan.main.main(18) run botan 
+2019-05-28 12:28:24,642,642 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:28:26,188,188 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-28 12:28:29,266,266 INF botan.model._translate(34) "I don't know what to say." -> "ru" 
+2019-05-28 12:28:29,273,273 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:28:29,949,949 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-28 12:28:29,956,956 INF botan.model._translate(36) Я не знаю, что сказать. 
+2019-05-28 12:28:57,583,583 INF botan.model._translate(34) "Привет" -> "en" 
+2019-05-28 12:28:57,591,591 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:28:58,187,187 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-28 12:28:58,192,192 INF botan.model._translate(36) Hi 
+2019-05-28 12:28:58,197,197 INF botan.model._translate(34) "I don't know what to say." -> "ru" 
+2019-05-28 12:28:58,201,201 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:28:58,759,759 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-28 12:28:58,770,770 INF botan.model._translate(36) Я не знаю, что сказать. 
+2019-05-28 12:29:25,481,481 INF botan.model._translate(34) "Почему вы решили открыть университет?" -> "en" 
+2019-05-28 12:29:25,489,489 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:29:26,077,077 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 81 
+2019-05-28 12:29:26,084,084 INF botan.model._translate(36) Why did you decide to open the University? 
+2019-05-28 12:29:26,092,092 INF botan.model._translate(34) "I don't know what to say." -> "ru" 
+2019-05-28 12:29:26,097,097 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:29:26,609,609 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-28 12:29:26,614,614 INF botan.model._translate(36) Я не знаю, что сказать. 
+2019-05-28 12:31:28,588,588 INF botan.model._translate(34) "I don't know what to say." -> "ru" 
+2019-05-28 12:31:28,599,599 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:31:29,151,151 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-28 12:31:29,155,155 INF botan.model._translate(36) Я не знаю, что сказать. 
+2019-05-28 12:34:56,554,554 INF botan.model._translate(34) "Нет" -> "en" 
+2019-05-28 12:34:56,582,582 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:34:57,149,149 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-28 12:34:57,154,154 INF botan.model._translate(36) No 
+2019-05-28 12:35:40,369,369 INF botan.model._translate(34) "What does it matter?" -> "ru" 
+2019-05-28 12:35:40,387,387 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 12:35:40,964,964 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 85 
+2019-05-28 12:35:40,972,972 INF botan.model._translate(36) Какое это имеет значение? 
+2019-05-28 12:47:02,210,210 INF botan.main.main(18) run botan 
+2019-05-28 12:47:02,214,214 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:47:03,887,887 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-28 12:49:49,931,931 INF botan.main.main(18) run botan 
+2019-05-28 12:49:49,933,933 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 12:49:51,367,367 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-28 13:07:17,595,595 INF botan.main.main(18) run botan 
+2019-05-28 13:07:17,606,606 INF botan.serve.main(16) run serve subcommand 
+2019-05-28 13:07:19,071,071 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-28 13:07:26,445,445 INF botan.model._translate(34) "Right." -> "ru" 
+2019-05-28 13:07:26,457,457 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 13:07:27,157,157 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 50 
+2019-05-28 13:07:27,165,165 INF botan.model._translate(36) Право. 
+2019-05-28 13:07:30,371,371 INF botan.model._translate(34) "I don't know what to say." -> "ru" 
+2019-05-28 13:07:30,380,380 DEB urllib3.connectionpool._new_conn(815) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-28 13:07:30,946,946 DEB urllib3.connectionpool._make_request(396) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-28 13:07:30,955,955 INF botan.model._translate(36) Я не знаю, что сказать. 
+2019-05-28 13:30:03,910,910 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 497, in _request
+    await resp.start(conn)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client_reqrep.py", line 857, in start
+    self._continue = None
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/helpers.py", line 585, in __exit__
+    raise asyncio.TimeoutError from None
+concurrent.futures._base.TimeoutError
+2019-05-28 13:30:08,153,153 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 955, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 825, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 789, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 959, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Name does not resolve]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Name does not resolve]
+2019-05-28 14:00:22,917,917 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 955, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 825, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 789, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 959, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Name does not resolve]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Name does not resolve]
+2019-05-28 14:00:28,926,926 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 955, in _create_direct_connection
+    traces=traces), loop=self._loop)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 825, in _resolve_host
+    self._resolver.resolve(host, port, family=self._family)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/resolver.py", line 30, in resolve
+    host, port, type=socket.SOCK_STREAM, family=family)
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 789, in getaddrinfo
+    None, getaddr_func, host, port, family, type, proto, flags)
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 959, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Name does not resolve]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Name does not resolve]
+2019-05-28 14:01:50,512,512 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-28 14:56:27,981,981 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 497, in _request
+    await resp.start(conn)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client_reqrep.py", line 844, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/streams.py", line 588, in read
+    await self._waiter
+aiohttp.client_exceptions.ServerDisconnectedError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ServerDisconnectedError: None
+2019-05-28 14:57:48,776,776 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]

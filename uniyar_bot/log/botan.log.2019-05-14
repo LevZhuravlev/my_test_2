@@ -1,0 +1,57 @@
+2019-05-14 07:09:56,521,521 INF botan.main.main(18) run botan 
+2019-05-14 07:09:56,533,533 INF botan.serve.main(16) run serve subcommand 
+2019-05-14 07:09:57,037,037 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-14 07:09:57,234,234 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=ConnectionRefusedError(111, 'Connection refused')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 44, in everything
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/local/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2019-05-14 07:10:03,089,089 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-14 07:10:03,625,625 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-14 07:59:23,813,813 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 497, in _request
+    await resp.start(conn)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client_reqrep.py", line 844, in start
+    message, payload = await self._protocol.read()  # type: ignore  # noqa
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/streams.py", line 588, in read
+    await self._waiter
+aiohttp.client_exceptions.ServerDisconnectedError: None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ServerDisconnectedError: None

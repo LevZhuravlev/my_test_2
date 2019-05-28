@@ -1,0 +1,37 @@
+version: '2'
+
+services:
+    chatscript:
+        image: apalkoff/chatscript:latest
+        container_name: "chatscript"
+        restart: always
+
+        volumes:
+            - ./chatscript/RAWDATA/filesBotan.txt:/app/ChatScript/RAWDATA/filesBotan.txt
+            - ./chatscript/RAWDATA/BOTAN:/app/ChatScript/RAWDATA/BOTAN
+        
+        command: sh -c "cd BINARIES && ./ChatScript local build1=filesBotan.txt && ./ChatScript defaultbot=Botan port=1024"
+
+    botan:
+        build: .
+        image: apalkoff/botan:latest
+        container_name: "botan"
+        hostname: "botan"
+        restart: always
+
+        links:
+            - "chatscript"
+
+        environment:
+            - CHATSCRIPT_HOST=chatscript
+            - CHATSCRIPT_PORT=1024
+
+        logging:
+          driver: json-file
+          options:
+              max-size: "10m"
+              max-file: "5"
+
+        volumes:
+            - ./config.prod.yaml:/app/config.yaml
+            - ./log:/app/log

@@ -1,0 +1,886 @@
+2019-05-25 12:35:02,003,003 INF botan.main.main(18) run botan 
+2019-05-25 12:35:02,021,021 INF botan.serve.main(16) run serve subcommand 
+2019-05-25 12:35:03,905,905 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-25 12:35:34,337,337 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 44, in everything
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 12:35:53,418,418 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=ConnectionRefusedError(111, 'Connection refused')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/local/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2019-05-25 12:36:08,052,052 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 44, in everything
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 12:36:49,137,137 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 12:37:53,743,743 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 12:38:32,361,361 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 12:38:35,900,900 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 12:38:50,677,677 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 12:59:50,875,875 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 13:00:04,148,148 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 44, in everything
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 13:00:45,007,007 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 44, in everything
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 13:06:43,476,476 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 13:26:36,052,052 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:26:36,636,636 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:27:00,474,474 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:27:00,974,974 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 53 
+2019-05-25 13:27:00,988,988 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:27:01,526,526 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:27:13,201,201 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:27:13,711,711 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 63 
+2019-05-25 13:27:24,445,445 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:27:24,925,925 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 61 
+2019-05-25 13:27:24,940,940 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:27:25,475,475 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:27:33,459,459 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:27:33,945,945 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 61 
+2019-05-25 13:27:33,957,957 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:27:35,209,209 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:28:19,039,039 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:28:19,527,527 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 58 
+2019-05-25 13:28:23,244,244 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:28:23,750,750 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:30:48,498,498 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:30:48,970,970 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:30:48,982,982 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:30:49,576,576 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:30:52,120,120 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:30:52,779,779 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:31:54,431,431 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:32:04,897,897 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:32:11,500,500 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:32:11,986,986 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 50 
+2019-05-25 13:32:19,514,514 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:32:20,009,009 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:32:20,021,021 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:32:20,497,497 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:36:14,946,946 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:36:15,525,525 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:36:26,291,291 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:36:26,930,930 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-25 13:36:26,948,948 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:36:27,453,453 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:37:38,121,121 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:37:38,723,723 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:37:43,439,439 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:37:43,908,908 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:37:43,924,924 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:37:44,555,555 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 44 
+2019-05-25 13:37:50,230,230 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:37:50,720,720 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:37:50,738,738 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:37:51,308,308 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 50 
+2019-05-25 13:37:57,045,045 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:37:57,657,657 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:40:17,400,400 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:40:17,932,932 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:40:39,543,543 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:40:40,227,227 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 66 
+2019-05-25 13:40:44,456,456 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:40:45,177,177 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:41:07,375,375 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:41:07,957,957 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:41:09,431,431 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:41:09,953,953 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:41:48,180,180 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:41:48,767,767 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-25 13:41:48,777,777 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:41:49,468,468 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:42:58,275,275 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:42:58,821,821 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-25 13:43:01,133,133 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:43:01,591,591 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:43:08,035,035 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:43:08,525,525 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 50 
+2019-05-25 13:43:14,477,477 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:43:14,976,976 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 13:43:14,991,991 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:43:15,490,490 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:43:40,650,650 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:43:41,162,162 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 13:44:18,473,473 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 13:44:18,982,982 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 44 
+2019-05-25 14:22:55,886,886 INF botan.main.main(18) run botan 
+2019-05-25 14:22:55,890,890 INF botan.serve.main(16) run serve subcommand 
+2019-05-25 14:24:11,511,511 WAR aiogram.start_polling(313) Goodbye! 
+2019-05-25 14:24:11,514,514 CRI botan.main.run(29) Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available] 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/botan/main.py", line 27, in run
+    super(BotanApp, cls).run(argv=argv, exit=exit)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 577, in run
+    inst, retcode = subapp.run(argv, exit=False)
+  File "/app/venv/lib/python3.7/site-packages/plumbum/cli/application.py", line 572, in run
+    retcode = inst.main(*tailargs)
+  File "/app/botan/serve.py", line 36, in main
+    skip_updates=True,
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 41, in start_polling
+    executor.start_polling(reset_webhook=reset_webhook, timeout=timeout, fast=fast)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 305, in start_polling
+    loop.run_until_complete(self._startup_polling())
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 584, in run_until_complete
+    return future.result()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 355, in _startup_polling
+    await self._welcome()
+  File "/app/venv/lib/python3.7/site-packages/aiogram/utils/executor.py", line 345, in _welcome
+    user = await self.dispatcher.bot.me
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 25, in me
+    setattr(self, '_me', await self.get_me())
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 174, in get_me
+    result = await self.request(api.Methods.GET_ME, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-25 14:24:14,708,708 INF botan.main.main(18) run botan 
+2019-05-25 14:24:14,710,710 INF botan.serve.main(16) run serve subcommand 
+2019-05-25 14:24:17,794,794 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-25 14:24:17,990,990 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:24:18,694,694 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 45 
+2019-05-25 14:24:18,745,745 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:24:19,308,308 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:25:39,391,391 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:25:40,008,008 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:27:18,031,031 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:27:18,677,677 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:27:22,704,704 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:27:23,235,235 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:27:52,561,561 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:27:53,170,170 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:28:05,947,947 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:28:06,541,541 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:29:41,766,766 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:29:42,487,487 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:30:44,618,618 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:30:45,115,115 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 50 
+2019-05-25 14:30:54,233,233 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:30:54,812,812 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:32:07,325,325 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:32:07,879,879 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:32:34,965,965 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:32:35,668,668 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:32:42,086,086 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:32:42,610,610 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 66 
+2019-05-25 14:35:13,698,698 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:35:14,388,388 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:37:07,778,778 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:37:08,492,492 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:37:29,470,470 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:37:30,021,021 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 14:37:56,489,489 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:37:57,060,060 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 66 
+2019-05-25 14:38:18,995,995 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:38:19,513,513 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 44 
+2019-05-25 14:38:28,730,730 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 14:38:29,250,250 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 44 
+2019-05-25 14:45:00,052,052 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 497, in _request
+    await resp.start(conn)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client_reqrep.py", line 857, in start
+    self._continue = None
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/helpers.py", line 585, in __exit__
+    raise asyncio.TimeoutError from None
+concurrent.futures._base.TimeoutError
+2019-05-25 14:46:21,320,320 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-25 14:47:41,820,820 ERR aiogram.dispatcher.dispatcher.start_polling(257) Cause exception while getting updates. 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 959, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 946, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 464, in sock_connect
+    return await fut
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 99] Address not available
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 97, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 1005, in __aenter__
+    self._resp = await self._coro
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/app/venv/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 255, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/bot.py", line 93, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/base.py", line 163, in request
+    proxy=self.proxy, proxy_auth=self.proxy_auth, timeout=self.timeout, **kwargs)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/bot/api.py", line 100, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:None [Address not available]
+2019-05-25 17:17:52,668,668 INF botan.main.main(18) run botan 
+2019-05-25 17:17:52,671,671 INF botan.serve.main(16) run serve subcommand 
+2019-05-25 17:17:54,200,200 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-25 17:18:48,836,836 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:18:49,552,552 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:19:06,679,679 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:19:07,222,222 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 66 
+2019-05-25 17:19:20,486,486 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:19:21,225,225 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:20:11,738,738 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:20:12,232,232 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 44 
+2019-05-25 17:20:15,319,319 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:20:15,947,947 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 50 
+2019-05-25 17:20:23,378,378 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:20:23,847,847 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-25 17:22:21,329,329 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:22:21,850,850 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 53 
+2019-05-25 17:22:31,841,841 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:22:32,411,411 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 45 
+2019-05-25 17:22:32,429,429 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:22:33,202,202 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 44 
+2019-05-25 17:22:38,931,931 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:22:39,403,403 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:22:39,419,419 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:22:39,947,947 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 50 
+2019-05-25 17:22:42,159,159 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:22:42,720,720 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:22:45,136,136 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:22:45,718,718 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-25 17:22:47,996,996 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:22:48,565,565 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:24:01,528,528 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:24:02,082,082 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:24:05,012,012 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:24:05,496,496 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-25 17:24:07,695,695 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:24:08,339,339 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:26:10,502,502 INF botan.main.main(18) run botan 
+2019-05-25 17:26:10,505,505 INF botan.serve.main(16) run serve subcommand 
+2019-05-25 17:26:10,987,987 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-25 17:26:11,232,232 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:26:11,851,851 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:26:13,111,111 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:26:13,723,723 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 91 
+2019-05-25 17:27:20,750,750 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:27:21,269,269 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:27:47,831,831 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:27:48,357,357 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:27:48,373,373 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:27:48,911,911 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:28:28,918,918 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:28:29,496,496 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-25 17:28:32,876,876 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:28:33,965,965 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:28:39,043,043 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:28:39,662,662 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:28:39,673,673 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:28:40,199,199 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:34:23,375,375 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:34:23,927,927 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:34:46,121,121 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:34:46,690,690 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:34:49,375,375 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:34:49,881,881 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 41 
+2019-05-25 17:34:51,786,786 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:34:52,337,337 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:35:22,343,343 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:35:23,151,151 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 44 
+2019-05-25 17:35:23,173,173 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:35:23,909,909 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:35:27,055,055 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:35:27,846,846 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:35:37,154,154 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:35:38,285,285 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:36:56,626,626 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:36:57,352,352 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 66 
+2019-05-25 17:37:06,279,279 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:37:06,979,979 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 42 
+2019-05-25 17:37:06,990,990 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:37:07,545,545 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 44 
+2019-05-25 17:37:52,521,521 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:37:53,097,097 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:38:07,446,446 DEB urllib3.connectionpool._new_conn(813) Starting new HTTPS connection (1): translate.yandex.net:443 
+2019-05-25 17:38:07,988,988 DEB urllib3.connectionpool._make_request(393) https://translate.yandex.net:443 "POST /api/v1.5/tr.json/translate HTTP/1.1" 200 79 
+2019-05-25 17:39:22,901,901 INF botan.main.main(18) run botan 
+2019-05-25 17:39:22,910,910 INF botan.serve.main(16) run serve subcommand 
+2019-05-25 17:39:23,910,910 WAR aiogram._skip_updates(342) Updates are skipped successfully. 
+2019-05-25 17:39:24,295,295 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=ConnectionRefusedError(111, 'Connection refused')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/local/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2019-05-25 17:40:30,466,466 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 17:40:32,559,559 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 17:40:34,903,903 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 17:40:35,848,848 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 17:40:36,316,316 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve
+2019-05-25 17:40:36,842,842 ERR asyncio.default_exception_handler(1608) Task exception was never retrieved
+future: <Task finished coro=<Dispatcher._process_polling_updates() done, defined at /app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py:274> exception=gaierror(-2, 'Name does not resolve')> 
+Traceback (most recent call last):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 282, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 142, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/dispatcher.py", line 162, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/app/venv/lib/python3.7/site-packages/aiogram/dispatcher/handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/app/botan/serve.py", line 58, in send_welcome
+    volley = self._processor.process(text=message.text, user='dev')
+  File "/app/botan/model.py", line 20, in process
+    output_cs = self._ask_chatscript(input_cs)
+  File "/app/botan/model.py", line 41, in _ask_chatscript
+    return self._chatscript.say(text)
+  File "/app/botan/chatscript.py", line 20, in say
+    connection = socket.create_connection((self.host, self.port))
+  File "/usr/local/lib/python3.7/socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name does not resolve

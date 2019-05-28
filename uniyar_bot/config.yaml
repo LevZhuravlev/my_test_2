@@ -1,0 +1,72 @@
+telegram:
+  api_token: 'telegram_bot_api_token_recieved_from_BotFather'
+
+yandex_translate:
+  api_key: 'yandex_translate_api_key'
+
+chatscript:
+  host: 127.0.0.1
+  port: 1024
+
+logging:
+  version: 1
+
+  disable_existing_loggers: False
+  formatters:
+    simple:
+      format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    file:
+      format: '%(asctime)s,%(msecs)03d %(levelname)-3.3s %(name)s.%(funcName)s(%(lineno)d) %(message)s '
+
+    colored:
+      (): colorlog.ColoredFormatter
+      format: '%(log_color)s%(asctime)s,%(msecs)03d %(levelname)-3.3s %(threadName)s %(name)s.%(funcName)s(%(lineno)d) %(message)s %(reset)s'
+      datefmt: '%H:%M:%S'
+      reset: True
+      log_colors:
+        DEBUG:    'cyan'
+        INFO:     'green'
+        WARNING:  'yellow'
+        ERROR:    'red'
+        CRITICAL: 'yellow,bg_red,bold'
+      style: '%'
+
+  handlers:
+      console:
+          class: logging.StreamHandler
+          level: DEBUG
+          formatter: colored
+          stream: ext://sys.stdout
+
+      logfile:
+          class: logging.handlers.TimedRotatingFileHandler
+          level: DEBUG
+          formatter: file
+          filename: 'log/botan.log'
+          when: 'midnight'
+          backupCount: 31
+
+  root:
+      level: DEBUG
+      handlers: [console, logfile]
+  
+  loggers:
+    botan: {
+      level: INFO,
+      propagate: True
+    }
+
+    aiogram: {
+      level: WARN,
+      propagate: True
+    }
+
+    asyncio: {
+      level: WARN,
+      propagate: True
+    }
+    
+    telethon.network.mtprotosender: { 
+            level: DEBUG,
+            propagate: True
+        }

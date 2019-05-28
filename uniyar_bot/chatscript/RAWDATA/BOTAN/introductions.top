@@ -1,0 +1,9 @@
+topic: ~introductions []
+
+t: Привет. Я знаю, что не настоящий. Но попробую поддерживать беседу. Меня зовут Ботан. А тебя?
+    #! my name is vasya
+    a: (name is _*) Приятно познакомиться, _0.
+    
+    #! I will not say
+    #! I will not tell
+    a: (I will not ~tell) Пусть останется загадкой.
